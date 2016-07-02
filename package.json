@@ -15,5 +15,9 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/tomabr/sungenerator/issues"
+  },
+  "dependencies": {
+    "express": "~4.14.0",
+    "body-parser": "~1.15.2"
   }
 }
