@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunbems</title>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="modernizr-2.6.2.min.js"></script>
+
+  </head>
+
+  <body>
+  <main>
+    <p>Need sun?</p>
+    <h1>So create your own SUN!</h1>
+    <input type="number" placeholder="Sunbeams" min="1" id="amount" />
+    <div class="container">
+      <!-- Top Navigation -->
+      <div class="component">
+        <div class="wrapper">
+          <ul class="sunbeams">
+          </ul>
+        </div>
+      </div>
+    </div>
+    </main>
+
+  </body>
+  <script>
+    (function() {
+
+      let ul = document.getElementsByClassName('sunbeams')[0];
+      let amount = document.getElementById('amount');
+
+      amount.addEventListener("change", function() {
+        let x = 360 / amount.value;
+        while (ul.firstChild) {
+          ul.removeChild(ul.firstChild);
+        }
+        for (var v of foo(x)) {
+          if (v >= 360){
+            break;
+          }
+        }
+      });
+      function* foo(x) {
+        var n = 1;
+        while (true) {
+          let angle = n * x;
+          let li = document.createElement("li");
+          li.style.transform = "rotate(" + angle + "deg) skew(30deg,30deg)";
+          ul.appendChild(li);
+          yield angle;
+          n++;
+        }
+      }
+
+    })();
+  </script>
+</html>
