@@ -63,6 +63,6 @@ input{
 
 @media only screen and (max-width: 480px) {
   .csstransforms .wrapper {
-    font-size: .68em;
+    font-size: .5em;
   }
 }
