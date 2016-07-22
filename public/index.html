@@ -34,7 +34,7 @@
       let ul = document.getElementsByClassName('sunbeams')[0];
       let amount = document.getElementById('amount');
 
-      amount.addEventListener("keypress", function() {
+      amount.addEventListener("keydown", function() {
         let x = 360 / amount.value;
         while (ul.firstChild) {
           ul.removeChild(ul.firstChild);
