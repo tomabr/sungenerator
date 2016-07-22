@@ -35,6 +35,9 @@
       let amount = document.getElementById('amount');
 
       amount.addEventListener("keyup", function() {
+        if(amount.value<1)
+          amount.value =1;
+        
         let x = 360 / amount.value;
         while (ul.firstChild) {
           ul.removeChild(ul.firstChild);
